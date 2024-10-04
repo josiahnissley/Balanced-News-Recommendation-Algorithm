@@ -1,0 +1,22 @@
+Model Metrics Summary
+======================
+
+Model Type: Random Forest Classifier
+
+Features Used:
+- (User_ID, Article_ID, Interaction)
+
+Hyperparameters:
+- n_estimators: 300
+- max_depth: 47
+- min_samples_split: 14
+- min_samples_leaf: 1
+- random_state: 42
+
+Performance Metrics:
+
+- Accuracy: 0.8056168592323337
+- Precision: 0.8180930789092512
+- Recall: 0.7714073634204276
+- F1 Score: 0.794064610776613
+- ROC AUC Score: 0.8046730199434452
