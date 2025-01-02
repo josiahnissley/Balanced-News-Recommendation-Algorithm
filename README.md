@@ -28,6 +28,16 @@ which showed a positively skewed distribution with a mean of 54 interactions per
 
 revealing that the average number of clicks per article was around nine, with higher click counts becoming increasingly sparse. These visualizations confirmed expected engagement patterns and prepared the data for modeling.
 
+__4. Modeling__
+
+I considered data preprocessing options such as one-hot encoding and standardization but found them unnecessary due to the high cardinality of the Article ID and User ID columns. I split the data into 80% training and 20% testing using sklearn's train_test_split. Initially, I tested a logistic regression model but achieved a low accuracy of 0.51. After experimenting with an XGBoost model, I improved the accuracy to 62%. However, the best results came from a Random Forest Classifier, which I optimized using Bayesian grid search, achieving an accuracy of over 80%. A performance comparison of all three models is shown in the following figure
+
+![image](https://github.com/user-attachments/assets/85822e93-4f6e-4eaa-8678-a3716fcbd6de)
+
+which highlights the Random Forest Classifier's superior performance across multiple metrics. To generate recommendations with reduced bias, I used the predict_proba() method to calculate interaction probabilities and created a balanced set of recommendations, where 50% were less than 75% likely to be interacted with, providing a more diverse newsfeed while maintaining engagement.
+
+
+
 
 
 
