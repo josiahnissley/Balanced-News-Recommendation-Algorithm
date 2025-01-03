@@ -36,8 +36,6 @@ I considered data preprocessing options such as one-hot encoding and standardiza
 
 which highlights the Random Forest Classifier's superior performance across multiple metrics. To generate recommendations with reduced bias, I used the predict_proba() method to calculate interaction probabilities and created a balanced set of recommendations, where 50% were less than 75% likely to be interacted with, providing a more diverse newsfeed while maintaining engagement.
 
+__Application & Future Work__
 
-
-
-
-
+A variation of this recommendation algorithm could be applied to news aggregation platforms like Google News, Apple News, or Microsoft News, providing users with a more balanced newsfeed while retaining engagement. While this project does not implement the algorithm directly into any of these applications, it demonstrates the potential for a more diverse approach to news recommendations. The algorithm follows a simple methodology, but future iterations could train on additional features, allowing the model to predict interactions with a broader range of articles. Future work could also involve experimenting with different predicted interaction cutoffs to further optimize the balance between engagement and diversity in newsfeeds.
